@@ -20,5 +20,22 @@ namespace VTI_EkansAndLaddersTests
             // Assert
             Assert.Equal(expected, initialPosition);
         }
+
+        [Fact]
+        public void Token_WhenTheTokenIsMovedTheFirstTimeStaysInTheCorrectPosition()
+        {
+            //Arrange
+            int expected = 4;
+            int steps = 3;
+
+            Board board = new();
+
+            //Act
+            board.MoveToken(steps);
+            int finalPosition = board.Token().GetTokenPosition();
+
+            // Assert
+            Assert.Equal(expected, finalPosition);
+        }
     }
 }

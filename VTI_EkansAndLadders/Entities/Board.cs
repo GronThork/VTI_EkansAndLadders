@@ -28,5 +28,10 @@ namespace VTI_EkansAndLadders.Entities
         {
             return _token;
         }
+
+        public void MoveToken(int steps)
+        {
+
+        }
     }
 }
