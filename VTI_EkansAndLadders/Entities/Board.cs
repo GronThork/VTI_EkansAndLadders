@@ -31,7 +31,8 @@ namespace VTI_EkansAndLadders.Entities
 
         public void MoveToken(int steps)
         {
-
+            int NewCellIndex = _token.GetTokenPosition() + steps;
+            _token.SetTokenPosition(_cells[NewCellIndex-1]);
         }
     }
 }
