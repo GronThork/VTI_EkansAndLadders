@@ -15,7 +15,8 @@ namespace VTI_EkansAndLaddersTests
             Game game = new();
 
             //Act
-            game.Board().MoveToken(99); // Move the token to the last cell (100)
+            game.Board().MoveToken(96);// Move the token to the cell 97
+            game.Board().MoveToken(3); // Move the token three steps
 
             // Assert
             Assert.Equal(expected, game.IsGameOver());
