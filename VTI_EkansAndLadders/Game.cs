@@ -13,13 +13,13 @@ namespace VTI_EkansAndLadders
 
         public Game()
         {
-            Board board = new();
+            board = new();
         }
 
-        
-        public bool GameOver()
+        //Returns a boolean if the player reaches the cell 100
+        public bool IsGameOver()
         {
-            return false;
+            return board.Token().GetTokenPosition() == 100 ? true : false;
         }
 
         public Board Board()

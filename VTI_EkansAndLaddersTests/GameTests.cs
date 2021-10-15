@@ -15,10 +15,10 @@ namespace VTI_EkansAndLaddersTests
             Game game = new();
 
             //Act
-            game.Board().MoveToken(99);
+            game.Board().MoveToken(99); // Move the token to the last cell (100)
 
             // Assert
-            Assert.Equal(expected, game.GameOver());
+            Assert.Equal(expected, game.IsGameOver());
         }
     }
 }
