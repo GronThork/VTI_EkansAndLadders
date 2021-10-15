@@ -11,12 +11,14 @@ namespace VTI_EkansAndLaddersTests
         {
             //Arrange
             bool expected = true;
+            int initialPosition = 97;
+            int steps = 3;
 
             Game game = new();
 
             //Act
-            game.Board().MoveToken(96);// Move the token to the cell 97
-            game.Board().MoveToken(3); // Move the token three steps
+            game.Board().MoveToken(initialPosition - 1); // Move the token to the cell 97
+            game.Board().MoveToken(steps); 
 
             // Assert
             Assert.Equal(expected, game.IsGameOver());

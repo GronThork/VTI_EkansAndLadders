@@ -57,5 +57,25 @@ namespace VTI_EkansAndLaddersTests
             // Assert
             Assert.Equal(expected, finalPosition);
         }
+
+        [Fact]
+        public void Token_TheTokenCantBeMovedBeyondLastCell()
+        {
+            //Arrange
+            int expected = 97;
+            int initialPosition = 97;
+            int steps = 4;
+
+            Board board = new();
+
+            //Act
+            board.MoveToken(initialPosition-1); // Move the token to the cell 97
+            board.MoveToken(steps);
+
+            int finalPosition = board.Token().GetTokenPosition();
+
+            // Assert
+            Assert.Equal(expected, finalPosition);
+        }
     }
 }
