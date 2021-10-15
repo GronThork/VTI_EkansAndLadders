@@ -31,7 +31,8 @@ namespace VTI_EkansAndLadders.Entities
 
         public void MoveToken(int steps)
         {
-            int NewCellIndex = _token.GetTokenPosition() + steps;
+            // If the new position is beyond to the last cell (100), then the token will stay in the same place. 
+            int NewCellIndex = _token.GetTokenPosition() + steps <= 100 ? _token.GetTokenPosition() + steps : _token.GetTokenPosition();
             _token.SetTokenPosition(_cells[NewCellIndex-1]);
         }
 
