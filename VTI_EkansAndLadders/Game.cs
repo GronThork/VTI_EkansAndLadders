@@ -11,6 +11,7 @@ namespace VTI_EkansAndLadders
     {
         private Board _board;
         private Token _token;
+        private Dice _dice;
 
         public Board Board { get { return _board; } }
         public Token Token { get { return _token; } }
@@ -20,8 +21,15 @@ namespace VTI_EkansAndLadders
         {
             _board = new();
             _token = new(_board.Cells[0]);
+            _dice = new();
         }
 
-
+        public void Initialize()
+        {
+            while (!Board.IsGameOver(_token))
+            {
+                Board.MoveToken(_dice.Roll(), _token);
+            }
+        }
     }
 }

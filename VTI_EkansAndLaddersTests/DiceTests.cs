@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using VTI_EkansAndLadders.Entities;
 using Xunit;
 
@@ -22,6 +23,32 @@ namespace VTI_EkansAndLaddersTests
 
             // Assert
             Assert.NotEqual(Notexpected, finalPosition);
+        }
+
+        [Fact]
+        public void Dice_TheResultOfTheRollWillBeBetweenOneAndSixInclusive()
+        {
+            //Arrange
+            bool expected = true;
+
+            Board board = new();
+            Token token = new(board.Cells[0]);
+            Dice dice = new();
+
+            //Act
+            bool correctResult = true;
+
+            for (int i = 0; i < 60; i++)
+            {
+                if (!Enumerable.Range(1, 6).Contains(dice.Roll()))
+                {
+                    correctResult = false;
+                    break;
+                }
+            }
+
+            // Assert
+            Assert.NotEqual(expected, correctResult);
         }
     }
 }
