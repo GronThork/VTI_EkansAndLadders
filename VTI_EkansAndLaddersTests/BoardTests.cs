@@ -102,7 +102,7 @@ namespace VTI_EkansAndLaddersTests
         }
 
         [Fact]
-        public void Board_IfTheTokenDoesntReachTheLastCellTheGameContinues()
+        public void Board_IfTheTokenDoesntReachTheLastCellThenTheGameContinues()
         {
             //Arrange
             bool expected = false;
