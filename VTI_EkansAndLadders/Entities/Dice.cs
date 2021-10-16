@@ -10,7 +10,7 @@ namespace VTI_EkansAndLadders.Entities
     {
         public int Roll()
         {
-            return 0; 
+            return 1; 
         }
     }
 }
