@@ -100,5 +100,26 @@ namespace VTI_EkansAndLaddersTests
             // Assert
             Assert.Equal(expected, board.IsGameOver(token));
         }
+
+        [Fact]
+        public void Board_IfTheTokenDoesntReachTheLastCellTheGameContinues()
+        {
+            //Arrange
+            bool expected = false;
+            int expectedPosition = 96;
+            int initialCell = 96; // (position 97)
+            int steps = 4;
+
+            Board board = new();
+            Token token = new(board.Cells[96]); // Move to cell 96 (position 97)
+
+            //Act
+            board.MoveToken(initialCell, token);
+            board.MoveToken(steps, token);
+
+            // Assert
+            Assert.Equal(expected, board.IsGameOver(token));
+            Assert.Equal(expectedPosition, token.GetTokenPosition());
+        }
     }
 }
