@@ -9,24 +9,19 @@ namespace VTI_EkansAndLadders
 {
     public class Game
     {
-        private Board board;
-        private Token token;
+        private Board _board;
+        private Token _token;
+
+        public Board Board { get { return _board; } }
+        public Token Token { get { return _token; } }
+
 
         public Game()
         {
-            board = new();
-            token = new(board.Cells()[0]);
+            _board = new();
+            _token = new(_board.Cells[0]);
         }
 
-        //Returns a boolean if the player reaches the cell 100
-        public bool IsGameOver()
-        {
-            return token.GetTokenPosition() == 100 ? true : false;
-        }
 
-        public Board Board()
-        {
-            return board;
-        }
     }
 }
