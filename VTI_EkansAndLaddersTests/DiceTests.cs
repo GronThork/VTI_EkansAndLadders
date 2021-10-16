@@ -48,7 +48,7 @@ namespace VTI_EkansAndLaddersTests
             }
 
             // Assert
-            Assert.NotEqual(expected, correctResult);
+            Assert.Equal(expected, correctResult);
         }
     }
 }

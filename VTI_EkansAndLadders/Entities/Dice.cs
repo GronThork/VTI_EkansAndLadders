@@ -8,9 +8,16 @@ namespace VTI_EkansAndLadders.Entities
 {
     public class Dice
     {
+        Random rd;
+
+        public Dice()
+        {
+            rd = new();
+        }
+
         public int Roll()
         {
-            return 1; 
+            return rd.Next(1, 7);
         }
     }
 }
