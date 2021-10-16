@@ -7,6 +7,24 @@ namespace VTI_EkansAndLaddersTests
     public class BoardTests
     {
         [Fact]
+        public void Board_TheTokenCanMove()
+        {
+            //Arrange
+            int Notexpected = 0;
+            int steps = 1;
+
+            Board board = new();
+            Token token = new(board.Cells[0]);
+
+            //Act
+            board.MoveToken(steps, token);
+            int finalPosition = token.GetTokenPosition();
+
+            // Assert
+            Assert.NotEqual(Notexpected, finalPosition);
+        }
+
+        [Fact]
         public void Board_WhenTheTokenIsMovedTheFirstTimeStaysInTheCorrectPosition()
         {
             //Arrange
