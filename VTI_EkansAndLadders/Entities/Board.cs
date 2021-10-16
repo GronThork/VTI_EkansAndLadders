@@ -9,7 +9,6 @@ namespace VTI_EkansAndLadders.Entities
     public class Board
     {
         private Cell[] _cells;
-        private Token _token;
 
         public Board()
         {
@@ -20,20 +19,13 @@ namespace VTI_EkansAndLadders.Entities
                 Cell cell = new(i);
                 _cells[i - 1] = cell;
             }
-
-            _token = new(_cells[0]);
         }
 
-        public Token Token()
-        {
-            return _token;
-        }
-
-        public void MoveToken(int steps)
+        public void MoveToken(int steps, Token token)
         {
             // If the new position is beyond to the last cell (100), then the token will stay in the same place. 
-            int NewCellIndex = _token.GetTokenPosition() + steps <= 100 ? _token.GetTokenPosition() + steps : _token.GetTokenPosition();
-            _token.SetTokenPosition(_cells[NewCellIndex-1]);
+            int NewCellIndex = token.GetTokenPosition() + steps <= 100 ? token.GetTokenPosition() + steps : token.GetTokenPosition();
+            token.SetTokenPosition(_cells[NewCellIndex-1]);
         }
 
         public Cell[] Cells()
