@@ -13,7 +13,14 @@ namespace VTI_EkansAndLaddersTests
             int Notexpected = 0;
             int steps = 1;
 
-            Board board = new();
+            Cell[] cells = new Cell[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                cells[i] = new Cell(i);
+            }
+
+            Board board = new(cells);
             Token token = new(board.Cells[0], "Samuel");
 
             //Act
@@ -31,7 +38,14 @@ namespace VTI_EkansAndLaddersTests
             int expected = 3;
             int steps = 3;
 
-            Board board = new();
+            Cell[] cells = new Cell[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                cells[i] = new Cell(i);
+            }
+
+            Board board = new(cells);
             Token token = new(board.Cells[0], "Samuel");
 
             //Act
@@ -50,7 +64,14 @@ namespace VTI_EkansAndLaddersTests
             int firstStep = 3;
             int secondStep = 4;
 
-            Board board = new();
+            Cell[] cells = new Cell[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                cells[i] = new Cell(i);
+            }
+
+            Board board = new(cells);
             Token token = new(board.Cells[0], "Samuel");
 
             //Act
@@ -70,7 +91,14 @@ namespace VTI_EkansAndLaddersTests
             int expected = 96;
             int steps = 4;
 
-            Board board = new();
+            Cell[] cells = new Cell[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                cells[i] = new Cell(i);
+            }
+
+            Board board = new(cells);
             Token token = new(board.Cells[96], "Samuel"); // Move to cell 96 (position 97)
 
             //Act
@@ -90,7 +118,14 @@ namespace VTI_EkansAndLaddersTests
             int initialCell = 96; // (position 97)
             int steps = 3;
 
-            Board board = new();
+            Cell[] cells = new Cell[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                cells[i] = new Cell(i);
+            }
+
+            Board board = new(cells);
             Token token = new(board.Cells[96], "Samuel"); // Move to cell 96 (position 97)
 
             //Act
@@ -110,7 +145,14 @@ namespace VTI_EkansAndLaddersTests
             int initialCell = 96; // (position 97)
             int steps = 4;
 
-            Board board = new();
+            Cell[] cells = new Cell[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                cells[i] = new Cell(i);
+            }
+
+            Board board = new(cells);
             Token token = new(board.Cells[96], "Samuel"); // Move to cell 96 (position 97)
 
             //Act

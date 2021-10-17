@@ -13,7 +13,14 @@ namespace VTI_EkansAndLaddersTests
             //Arrange
             int Notexpected = 0;
 
-            Board board = new();
+            Cell[] cells = new Cell[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                cells[i] = new Cell(i);
+            }
+
+            Board board = new(cells);
             Token token = new(board.Cells[0], "Samuel");
             Dice dice = new();
 
@@ -31,7 +38,14 @@ namespace VTI_EkansAndLaddersTests
             //Arrange
             bool expected = true;
 
-            Board board = new();
+            Cell[] cells = new Cell[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                cells[i] = new Cell(i);
+            }
+
+            Board board = new(cells);
             Token token = new(board.Cells[0], "Samuel");
             Dice dice = new();
 
