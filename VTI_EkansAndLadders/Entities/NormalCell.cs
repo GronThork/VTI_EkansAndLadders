@@ -7,16 +7,16 @@ using VTI_EkansAndLadders.Entities.Interfaces;
 
 namespace VTI_EkansAndLadders.Entities
 {
-    public class Cell : ICell
+    public class NormalCell : Cell
     {
         private int _cellNum;
 
-        public Cell(int cellNum)
+        public NormalCell(int cellNum)
         {
             _cellNum = cellNum;
         }
 
-        public int GetCellNum()
+        public override int GetCellNum()
         {
             return _cellNum;
         }

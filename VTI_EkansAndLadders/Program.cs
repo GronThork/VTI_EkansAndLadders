@@ -12,7 +12,7 @@ namespace VTI_EkansAndLadders
 
             for (int i = 0; i < 100; i++)
             {
-                cells[i] = new Cell(i);
+                cells[i] = new NormalCell(i);
             }
 
             Dice dice = new();

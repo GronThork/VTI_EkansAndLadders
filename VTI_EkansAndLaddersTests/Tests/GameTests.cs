@@ -17,7 +17,7 @@ namespace VTI_EkansAndLaddersTests.Tests
         {
             for (int i = 0; i < 100; i++)
             {
-                _cells[i] = new Cell(i);
+                _cells[i] = new NormalCell(i);
             }
 
             _board = new(_cells);

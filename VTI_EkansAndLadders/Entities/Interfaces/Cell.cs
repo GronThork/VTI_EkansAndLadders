@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace VTI_EkansAndLadders.Entities.Interfaces
 {
-    public interface ICell
+    public abstract class Cell
     {
-        int GetCellNum();
+        public abstract int GetCellNum();
     }
 }

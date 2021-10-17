@@ -9,11 +9,11 @@ namespace VTI_EkansAndLadders.Entities
 {
     public class Board : IBoard
     {
-        private ICell[] _cells;
+        private Cell[] _cells;
 
-        public ICell[] Cells { get { return _cells; } }
+        public Cell[] Cells { get { return _cells; } }
 
-        public Board(ICell[] cells)
+        public Board(Cell[] cells)
         {
             _cells = cells;
         }

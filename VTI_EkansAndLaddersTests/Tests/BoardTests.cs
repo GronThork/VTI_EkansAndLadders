@@ -7,7 +7,7 @@ namespace VTI_EkansAndLaddersTests.Tests
 {
     public class BoardTests
     {
-        private readonly Cell[] _cells;
+        private readonly NormalCell[] _cells;
 
         public BoardTests()
         {
@@ -78,11 +78,11 @@ namespace VTI_EkansAndLaddersTests.Tests
             int expected = 96;
             int steps = 4;
 
-            Cell[] cells = new Cell[100];
+            NormalCell[] cells = new NormalCell[100];
 
             for (int i = 0; i < 100; i++)
             {
-                cells[i] = new Cell(i);
+                cells[i] = new NormalCell(i);
             }
 
             Board board = new(cells);
@@ -105,11 +105,11 @@ namespace VTI_EkansAndLaddersTests.Tests
             int initialCell = 96; // (position 97)
             int steps = 3;
 
-            Cell[] cells = new Cell[100];
+            NormalCell[] cells = new NormalCell[100];
 
             for (int i = 0; i < 100; i++)
             {
-                cells[i] = new Cell(i);
+                cells[i] = new NormalCell(i);
             }
 
             Board board = new(cells);
@@ -132,11 +132,11 @@ namespace VTI_EkansAndLaddersTests.Tests
             int initialCell = 96; // (position 97)
             int steps = 4;
 
-            Cell[] cells = new Cell[100];
+            NormalCell[] cells = new NormalCell[100];
 
             for (int i = 0; i < 100; i++)
             {
-                cells[i] = new Cell(i);
+                cells[i] = new NormalCell(i);
             }
 
             Board board = new(cells);

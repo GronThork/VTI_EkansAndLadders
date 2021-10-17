@@ -9,12 +9,12 @@ namespace VTI_EkansAndLadders.Entities
 {
     public class Token : IToken
     {
-        private ICell _position;
+        private Cell _position;
         private string _name;
 
         public string Name { get { return _name; } }
 
-        public Token(ICell initialCell, string name)
+        public Token(Cell initialCell, string name)
         {
             _position = initialCell;
             _name = name;
@@ -24,7 +24,7 @@ namespace VTI_EkansAndLadders.Entities
             return _position.GetCellNum();
         }
 
-        public void SetTokenPosition(ICell cellNum)
+        public void SetTokenPosition(Cell cellNum)
         {
             _position = cellNum;
         }

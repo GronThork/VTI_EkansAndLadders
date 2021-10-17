@@ -9,13 +9,13 @@ namespace VTI_EkansAndLaddersTests.Helpers
 {
     internal class CellHelper
     {
-        public static Cell[] GetDefaultCells()
+        public static NormalCell[] GetDefaultCells()
         {
-            Cell[] cells = new Cell[100];
+            NormalCell[] cells = new NormalCell[100];
 
             for (int i = 0; i < 100; i++)
             {
-                cells[i] = new Cell(i);
+                cells[i] = new NormalCell(i);
             }
 
             return cells;

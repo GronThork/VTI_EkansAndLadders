@@ -10,7 +10,7 @@ namespace VTI_EkansAndLadders.Entities.Interfaces
     {
         string Name { get; }
         int GetPosition();
-        void SetTokenPosition(ICell cellNum);
+        void SetTokenPosition(Cell cellNum);
 
     }
 }

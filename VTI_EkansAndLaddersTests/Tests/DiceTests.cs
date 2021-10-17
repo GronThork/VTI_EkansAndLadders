@@ -8,7 +8,7 @@ namespace VTI_EkansAndLaddersTests.Tests
 {
     public class DiceTests
     {
-        private readonly Cell[] _cells;
+        private readonly NormalCell[] _cells;
 
         public DiceTests()
         {
@@ -21,11 +21,11 @@ namespace VTI_EkansAndLaddersTests.Tests
             //Arrange
             int Notexpected = 0;
 
-            Cell[] cells = new Cell[100];
+            NormalCell[] cells = new NormalCell[100];
 
             for (int i = 0; i < 100; i++)
             {
-                cells[i] = new Cell(i);
+                cells[i] = new NormalCell(i);
             }
 
             Board board = new(cells);
@@ -46,11 +46,11 @@ namespace VTI_EkansAndLaddersTests.Tests
             //Arrange
             bool expected = true;
 
-            Cell[] cells = new Cell[100];
+            NormalCell[] cells = new NormalCell[100];
 
             for (int i = 0; i < 100; i++)
             {
-                cells[i] = new Cell(i);
+                cells[i] = new NormalCell(i);
             }
 
             Board board = new(cells);

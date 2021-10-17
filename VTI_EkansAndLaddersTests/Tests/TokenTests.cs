@@ -7,7 +7,7 @@ namespace VTI_EkansAndLaddersTests.Tests
 {
     public class TokenTests
     {
-        private readonly Cell[] _cells;
+        private readonly NormalCell[] _cells;
 
         public TokenTests()
         {
@@ -20,11 +20,11 @@ namespace VTI_EkansAndLaddersTests.Tests
             //Arrange
             int expected = 0;
 
-            Cell[] cells = new Cell[100];
+            NormalCell[] cells = new NormalCell[100];
 
             for (int i = 0; i < 100; i++)
             {
-                cells[i] = new Cell(i);
+                cells[i] = new NormalCell(i);
             }
 
             Board board = new(cells);
