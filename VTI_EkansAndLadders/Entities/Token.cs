@@ -8,11 +8,15 @@ namespace VTI_EkansAndLadders.Entities
 {
     public class Token
     {
-        Cell _position;
+        private Cell _position;
+        private string _name;
 
-        public Token(Cell initialCell)
+        public string Name { get { return _name; } }
+
+        public Token(Cell initialCell, string name)
         {
             _position = initialCell;
+            _name = name;
         }
         public int GetTokenPosition()
         {

@@ -20,7 +20,6 @@ namespace VTI_EkansAndLadders
         public Game()
         {
             _board = new();
-            _token = new(_board.Cells[0]);
             _dice = new();
         }
 
