@@ -13,7 +13,7 @@ namespace VTI_EkansAndLaddersTests
             int expected = 0;
 
             Board board = new();
-            Token token = new(board.Cells[0]);
+            Token token = new(board.Cells[0], "Samuel");
 
             //Act
             int initialPosition = token.GetTokenPosition();

@@ -14,7 +14,7 @@ namespace VTI_EkansAndLaddersTests
             int steps = 1;
 
             Board board = new();
-            Token token = new(board.Cells[0]);
+            Token token = new(board.Cells[0], "Samuel");
 
             //Act
             board.MoveToken(steps, token);
@@ -32,7 +32,7 @@ namespace VTI_EkansAndLaddersTests
             int steps = 3;
 
             Board board = new();
-            Token token = new(board.Cells[0]);
+            Token token = new(board.Cells[0], "Samuel");
 
             //Act
             board.MoveToken(steps, token);
@@ -51,7 +51,7 @@ namespace VTI_EkansAndLaddersTests
             int secondStep = 4;
 
             Board board = new();
-            Token token = new(board.Cells[0]);
+            Token token = new(board.Cells[0], "Samuel");
 
             //Act
             board.MoveToken(firstStep, token);
@@ -71,7 +71,7 @@ namespace VTI_EkansAndLaddersTests
             int steps = 4;
 
             Board board = new();
-            Token token = new(board.Cells[96]); // Move to cell 96 (position 97)
+            Token token = new(board.Cells[96], "Samuel"); // Move to cell 96 (position 97)
 
             //Act
             board.MoveToken(steps, token);
@@ -91,7 +91,7 @@ namespace VTI_EkansAndLaddersTests
             int steps = 3;
 
             Board board = new();
-            Token token = new(board.Cells[96]); // Move to cell 96 (position 97)
+            Token token = new(board.Cells[96], "Samuel"); // Move to cell 96 (position 97)
 
             //Act
             board.MoveToken(initialCell,token);
@@ -111,7 +111,7 @@ namespace VTI_EkansAndLaddersTests
             int steps = 4;
 
             Board board = new();
-            Token token = new(board.Cells[96]); // Move to cell 96 (position 97)
+            Token token = new(board.Cells[96], "Samuel"); // Move to cell 96 (position 97)
 
             //Act
             board.MoveToken(initialCell, token);

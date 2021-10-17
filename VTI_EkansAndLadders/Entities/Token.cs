@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VTI_EkansAndLadders.Entities.Interfaces;
 
 namespace VTI_EkansAndLadders.Entities
 {
-    public class Token
+    public class Token : IToken
     {
         private Cell _position;
         private string _name;

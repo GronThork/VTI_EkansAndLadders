@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VTI_EkansAndLadders.Entities.Interfaces;
 
 namespace VTI_EkansAndLadders.Entities
 {
-    public class Dice
+    public class Dice : IDice
     {
         Random rd;
 

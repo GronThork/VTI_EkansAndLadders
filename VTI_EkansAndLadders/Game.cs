@@ -4,31 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VTI_EkansAndLadders.Entities;
+using VTI_EkansAndLadders.Entities.Interfaces;
 
 namespace VTI_EkansAndLadders
 {
     public class Game
     {
-        private Board _board;
-        private Token _token;
-        private Dice _dice;
+        private IBoard _board;
+        private IToken _token;
+        private IDice _dice;
 
-        public Game()
+        public Game(IDice dice, IBoard board, IToken token)
         {
-            _board = new();
-            _dice = new();
+            _dice = dice;
+            _board = board;
+            _token = token;
         }
 
         public void Initialize()
         {
-            Console.WriteLine("Welcome to the Ekans & Ladders Game!");
-            Console.WriteLine("Tell me player!! Whats your name?");
-            string name = Console.ReadLine();
-
-            _token = new(_board.Cells[0], name);
-            Console.WriteLine($"Nice to meet you {_token.Name}. Get ready to play!");
-
             int roll;
+
             while (!_board.IsGameOver(_token))
             {
                 Console.WriteLine($"{_token.Name}, roll the dice!");

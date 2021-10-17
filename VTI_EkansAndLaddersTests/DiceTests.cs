@@ -14,7 +14,7 @@ namespace VTI_EkansAndLaddersTests
             int Notexpected = 0;
 
             Board board = new();
-            Token token = new(board.Cells[0]);
+            Token token = new(board.Cells[0], "Samuel");
             Dice dice = new();
 
             //Act
@@ -32,7 +32,7 @@ namespace VTI_EkansAndLaddersTests
             bool expected = true;
 
             Board board = new();
-            Token token = new(board.Cells[0]);
+            Token token = new(board.Cells[0], "Samuel");
             Dice dice = new();
 
             //Act

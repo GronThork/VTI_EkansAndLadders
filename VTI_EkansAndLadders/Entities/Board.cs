@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VTI_EkansAndLadders.Entities.Interfaces;
 
 namespace VTI_EkansAndLadders.Entities
 {
-    public class Board
+    public class Board : IBoard
     {
         private Cell[] _cells;
 
@@ -24,7 +25,7 @@ namespace VTI_EkansAndLadders.Entities
             }
         }
 
-        public void MoveToken(int steps, Token token)
+        public void MoveToken(int steps, IToken token)
         {
             // If the new position is beyond to the last cell, then the token will stay in the same place. 
             int NewCellIndex = token.GetTokenPosition() + steps < _cells.Length ? token.GetTokenPosition() + steps : token.GetTokenPosition();
@@ -32,7 +33,7 @@ namespace VTI_EkansAndLadders.Entities
         }
 
         //Returns a boolean if the player reaches the cell number 100
-        public bool IsGameOver(Token token)
+        public bool IsGameOver(IToken token)
         {
             return token.GetTokenPosition() == _cells.Length - 1 ? true : false;
         }
