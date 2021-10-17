@@ -1,11 +1,19 @@
 using System;
 using VTI_EkansAndLadders.Entities;
+using VTI_EkansAndLaddersTests.Helpers;
 using Xunit;
 
-namespace VTI_EkansAndLaddersTests
+namespace VTI_EkansAndLaddersTests.Tests
 {
     public class TokenTests
     {
+        private readonly Cell[] _cells;
+
+        public TokenTests()
+        {
+            _cells = CellHelper.GetDefaultCells();
+        }
+
         [Fact]
         public void Token_WhenTheGameStartsTheTokenIsOnSquareOne()
         {
@@ -23,7 +31,7 @@ namespace VTI_EkansAndLaddersTests
             Token token = new(board.Cells[0], "Samuel");
 
             //Act
-            int initialPosition = token.GetTokenPosition();
+            int initialPosition = token.GetPosition();
 
             // Assert
             Assert.Equal(expected, initialPosition);

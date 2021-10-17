@@ -19,7 +19,7 @@ namespace VTI_EkansAndLadders.Entities
             _position = initialCell;
             _name = name;
         }
-        public int GetTokenPosition()
+        public int GetPosition()
         {
             return _position.GetCellNum();
         }

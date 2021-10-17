@@ -21,14 +21,14 @@ namespace VTI_EkansAndLadders.Entities
         public void MoveToken(int steps, IToken token)
         {
             // If the new position is beyond to the last cell, then the token will stay in the same place. 
-            int NewCellIndex = token.GetTokenPosition() + steps < _cells.Length ? token.GetTokenPosition() + steps : token.GetTokenPosition();
+            int NewCellIndex = token.GetPosition() + steps < _cells.Length ? token.GetPosition() + steps : token.GetPosition();
             token.SetTokenPosition(_cells[NewCellIndex]);
         }
 
         //Returns a boolean if the player reaches the cell number 100
         public bool IsGameOver(IToken token)
         {
-            return token.GetTokenPosition() == _cells.Length - 1 ? true : false;
+            return token.GetPosition() == _cells.Length - 1 ? true : false;
         }
     }
 }

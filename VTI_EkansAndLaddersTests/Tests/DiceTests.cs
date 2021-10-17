@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Linq;
 using VTI_EkansAndLadders.Entities;
+using VTI_EkansAndLaddersTests.Helpers;
 using Xunit;
 
-namespace VTI_EkansAndLaddersTests
+namespace VTI_EkansAndLaddersTests.Tests
 {
     public class DiceTests
     {
+        private readonly Cell[] _cells;
+
+        public DiceTests()
+        {
+            _cells = CellHelper.GetDefaultCells();
+        }
+
         [Fact]
         public void Dice_MoveTheTokenBasedOnDiceRoll()
         {
@@ -26,7 +34,7 @@ namespace VTI_EkansAndLaddersTests
 
             //Act
             board.MoveToken(dice.Roll(), token);
-            int finalPosition = token.GetTokenPosition();
+            int finalPosition = token.GetPosition();
 
             // Assert
             Assert.NotEqual(Notexpected, finalPosition);

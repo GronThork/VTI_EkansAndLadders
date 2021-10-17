@@ -30,7 +30,7 @@ namespace VTI_EkansAndLadders
                 Console.WriteLine($"{_token.Name}, roll the dice!");
                 roll = _dice.Roll();
                 _board.MoveToken(roll, _token);
-                Console.WriteLine($"Good wrist {_token.Name}! You have rolled for a {roll}. You move to position {_token.GetTokenPosition() + 1}.");
+                Console.WriteLine($"Good wrist {_token.Name}! You have rolled for a {roll}. You move to position {_token.GetPosition() + 1}.");
             }
 
             Console.WriteLine($"Congratulations {_token.Name}, you are the winner!");
