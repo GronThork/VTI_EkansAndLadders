@@ -13,10 +13,6 @@ namespace VTI_EkansAndLadders
         private Token _token;
         private Dice _dice;
 
-        public Board Board { get { return _board; } }
-        public Token Token { get { return _token; } }
-
-
         public Game()
         {
             _board = new();
@@ -25,10 +21,23 @@ namespace VTI_EkansAndLadders
 
         public void Initialize()
         {
-            while (!Board.IsGameOver(_token))
+            Console.WriteLine("Welcome to the Ekans & Ladders Game!");
+            Console.WriteLine("Tell me player!! Whats your name?");
+            string name = Console.ReadLine();
+
+            _token = new(_board.Cells[0], name);
+            Console.WriteLine($"Nice to meet you {_token.Name}. Get ready to play!");
+
+            int roll;
+            while (!_board.IsGameOver(_token))
             {
-                Board.MoveToken(_dice.Roll(), _token);
+                Console.WriteLine($"{_token.Name}, roll the dice!");
+                roll = _dice.Roll();
+                _board.MoveToken(roll, _token);
+                Console.WriteLine($"Good wrist {_token.Name}! You have rolled for a {roll}. You move to position {_token.GetTokenPosition() + 1}.");
             }
+
+            Console.WriteLine($"Congratulations {_token.Name}, you are the winner!");
         }
     }
 }

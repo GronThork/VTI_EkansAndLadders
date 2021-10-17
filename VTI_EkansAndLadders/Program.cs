@@ -6,7 +6,8 @@ namespace VTI_EkansAndLadders
     {
         static void Main(string[] args)
         {
-
+            Game game = new();
+            game.Initialize();
         }
     }
 }
