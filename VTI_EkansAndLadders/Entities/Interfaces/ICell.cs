@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace VTI_EkansAndLadders.Entities.Interfaces
 {
-    public interface IToken
+    public interface ICell
     {
-        string Name { get; }
-        int GetTokenPosition();
-        void SetTokenPosition(ICell cellNum);
-
+        int GetCellNum();
     }
 }

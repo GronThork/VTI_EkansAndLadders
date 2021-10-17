@@ -8,9 +8,16 @@ namespace VTI_EkansAndLadders
     {
         static void Main(string[] args)
         {
+            Cell[] cells = new Cell[100];
+
+            for (int i = 0; i < 100; i++)
+            {
+                cells[i] = new Cell(i);
+            }
+
             Dice dice = new();
-            Board board = new();
             
+            Board board = new(cells);
 
             Console.WriteLine("Welcome to the Ekans & Ladders Game!");
             Console.WriteLine("Tell me player!! Whats your name?");

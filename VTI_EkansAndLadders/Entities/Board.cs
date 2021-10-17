@@ -9,20 +9,13 @@ namespace VTI_EkansAndLadders.Entities
 {
     public class Board : IBoard
     {
-        private Cell[] _cells;
+        private ICell[] _cells;
 
-        public Cell[] Cells { get { return _cells; } }
+        public ICell[] Cells { get { return _cells; } }
 
-        public Board()
+        public Board(ICell[] cells)
         {
-            //Create the board with 100 cells
-            _cells = new Cell[100];
-
-            for (int i = 0; i < 100; i++)
-            {
-                Cell cell = new(i);
-                _cells[i] = cell;
-            }
+            _cells = cells;
         }
 
         public void MoveToken(int steps, IToken token)
